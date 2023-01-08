@@ -10,9 +10,20 @@
 -->
 <head>
 <meta charset="utf-8">
+<style>
+    botton{
+
+    }
+</style>
 <script>
-    function toggle(str){//문자열 매개변수를 받아서 간단히버튼을 출력해주는 함수
-        ;
+    function toggle(){//문자열 매개변수를 받아서 간단히버튼을 출력해주는 함수
+        var divid = document.getElementById("text");
+        if(divid.style.display==="block"){
+            divid.style.display = "none";
+        }
+        else{
+            divid.style.display = "block";
+        }
     }
 </script>
 <title>
@@ -20,9 +31,10 @@
 </head>
 <body>
     <h1>Ipsum</h1>
-    <script>
-        var ip = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac malesuada felis. Nam sagittis metus iaculis, volutpat diam a, varius felis. Vestibulum auctor, nisl sed gravida finibus, odio risus porttitor nunc, rhoncus interdum neque lorem eget diam. Praesent feugiat turpis non libero hendrerit, in vestibulum turpis interdum. Nulla sed vehicula nisl. Nunc euismod tristique orci eu cursus. Sed euismod rhoncus lorem mattis dapibus. Duis vitae arcu in nulla semper molestie. Quisque auctor nisl at ante varius vehicula. Mauris vel convallis velit. Sed ipsum erat, bibendum eu nibh vitae, suscipit convallis turpis. Phasellus venenatis fringilla dui, at blandit nibh."
-        toggle(ip);
-    </script>
+    <botton onclick="toggle()">toggle</botton>
+    <div id = "text" style="display: block;">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac malesuada felis. Nam sagittis metus iaculis, volutpat diam a, varius felis. Vestibulum auctor, nisl sed gravida finibus, odio risus porttitor nunc, rhoncus interdum neque lorem eget diam. Praesent feugiat turpis non libero hendrerit, in vestibulum turpis interdum. Nulla sed vehicula nisl. Nunc euismod tristique orci eu cursus. Sed euismod rhoncus lorem mattis dapibus. Duis vitae arcu in nulla semper molestie. Quisque auctor nisl at ante varius vehicula. Mauris vel convallis velit. Sed ipsum erat, bibendum eu nibh vitae, suscipit convallis turpis. Phasellus venenatis fringilla dui, at blandit nibh.
+    </div>
+    <h2><b>note</b>: this is next text</h2>
 </body>
 </html>
