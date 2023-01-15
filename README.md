@@ -1,4 +1,4 @@
-# military_project_javascript
+# military_project
 군  코딩 공부를 위한 프로젝트
 이용하는 책 : 자바스크립트 완벽 가이드
 
