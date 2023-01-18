@@ -5,34 +5,28 @@
             background-color: gray;
             margin: 0;
         }
-        .main-grid{
+        .main-grid {
             display: grid;
             grid-template-rows: repeat(6,1fr);
             grid-template-columns: 1fr;
-            grid-template-areas: 
-            "title"
-            "index"
-            "subtitle"
-            "subtitle"
-            "ending"
-            "scoreboard";
+            grid-template-areas: "title" "index" "subtitle" "subtitle" "ending" "scoreboard";
         }
-        #title{
+        #title {
             grid-area: title;
         }
-        #index{
+        #index {
             grid-area: index;
         }
-        .subtitle{
+        .subtitle {
             grid-area: subtitle;
         }
-        #ending{
+        #ending {
             grid-area: ending;
         }
-        #scoreboard{
+        #scoreboard {
             grid-area: scoreboard;
         }
-        #titleimg{
+        #titleimg {
             width: 100%;
             height: 80px;
         }
@@ -46,12 +40,13 @@
     <body>
         <div class="main-grid">
             <div id="title">
-                <img id="titleimg",
+                <img
+                    id="titleimg"
                     src="https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616_960_720.jpg">
             </div>
             <div id="index">1</div>
             <div class="subtitle">2</div>
-            <div class="subtitle">2-2</div>
+            <!-- 새로운 flex or grid로 여러개의 subtitle 구현 -->
             <div id="ending">3</div>
             <div id="scoreboard">4</div>
         </div>
