@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html>
     <style>
-        body{
+        body {
             background-color: gray;
-            margin: 0px;
+            margin: 0;
+        }
+        .main-grid{
+            display: grid;
+            grid-template-rows: repeat(6,1fr);
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            "title"
+            "index"
+            "subtitle"
+            "subtitle"
+            "ending"
+            "scoreboard";
+        }
+        #title{
+            grid-area: title;
+        }
+        #index{
+            grid-area: index;
+        }
+        .subtitle{
+            grid-area: subtitle;
+        }
+        #ending{
+            grid-area: ending;
+        }
+        #scoreboard{
+            grid-area: scoreboard;
         }
         #titleimg{
-            border: 0px;
             width: 100%;
-            padding: 0px;
-            margin: 0px;
+            height: 80px;
         }
     </style>
     <head>
@@ -19,9 +44,16 @@
         </title>
     </head>
     <body>
-        <div class="container" >
-            <div><img src="https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616_960_720.jpg" id="titleimg"></div>
-        
+        <div class="main-grid">
+            <div id="title">
+                <img id="titleimg",
+                    src="https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616_960_720.jpg">
+            </div>
+            <div id="index">1</div>
+            <div class="subtitle">2</div>
+            <div class="subtitle">2-2</div>
+            <div id="ending">3</div>
+            <div id="scoreboard">4</div>
         </div>
     </body>
 </html>
