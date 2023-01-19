@@ -12,7 +12,11 @@
             grid-template-areas: "title" "index" "subtitle" "subtitle" "ending" "scoreboard";
         }
         #title {
+            height: 300px;
             grid-area: title;
+            position: relative;
+            background: url("https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616_960_720.jpg");
+            width: 100%;
         }
         #index {
             grid-area: index;
@@ -26,8 +30,15 @@
         #scoreboard {
             grid-area: scoreboard;
         }
-        #titleimg {
-            width: 100%;
+        #titletext{
+            position: absolute;
+            bottom: 0;
+            text-align: center;
+            right: 0em;
+            left: 0em;
+            color: whitesmoke;
+            font-size: 50px;
+            font-family: sans-serif;
         }
     </style>
     <head>
@@ -39,10 +50,8 @@
     <body>
         <div class="main-grid">
             <div id="title">
-                <img
-                    id="titleimg"
-                    src="https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616_960_720.jpg">
-            </div>
+                <div id="titletext">Title</div>
+                </div>
             <div id="index">1</div>
             <div class="subtitle">2</div>
             <!-- 새로운 flex or grid로 여러개의 subtitle 구현 -->
