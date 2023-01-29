@@ -1,44 +1,28 @@
 <!DOCTYPE html>
 <html>
     <style>
-        body {
-            background-color: gray;
-            margin: 0;
+        body{
+            max-width: 1920px;
+            background-color: black;
+            margin: 0px;
         }
-        .main-grid {
-            display: grid;
-            grid-template-rows: repeat(6,1fr);
-            grid-template-columns: 1fr;
-            grid-template-areas: "title" "index" "subtitle" "subtitle" "ending" "scoreboard";
+        .container_main{
+            display: flex;
+            width: 1200px;
+            margin-left: 360px;
+            margin-right: 360px;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: stretch;
+            align-content: stretch;
         }
-        #title {
-            height: 300px;
-            grid-area: title;
-            position: relative;
-            background: url("https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616_960_720.jpg");
-            width: 100%;
-        }
-        #index {
-            grid-area: index;
-        }
-        .subtitle {
-            grid-area: subtitle;
-        }
-        #ending {
-            grid-area: ending;
-        }
-        #scoreboard {
-            grid-area: scoreboard;
-        }
-        #titletext{
-            position: absolute;
-            bottom: 0;
-            text-align: center;
-            right: 0em;
-            left: 0em;
-            color: whitesmoke;
-            font-size: 50px;
-            font-family: sans-serif;
+        .intro{
+            width: 1200px;
+            height: 619px;
+            left: 360px;
+            background-image: url("titleimg.png");
+            background-size: contain;
         }
     </style>
     <head>
@@ -48,15 +32,13 @@
         </title>
     </head>
     <body>
-        <div class="main-grid">
-            <div id="title">
-                <div id="titletext">Title</div>
-                </div>
-            <div id="index">1</div>
-            <div class="subtitle">2</div>
-            <!-- 새로운 flex or grid로 여러개의 subtitle 구현 -->
-            <div id="ending">3</div>
-            <div id="scoreboard">4</div>
+        <div class="container_main">
+            <div class="intro">A</div>
+            <div class="index">B</div>
+            <div class="start">C</div>
+            <div class="subtitle">D</div>
+            <div class="end">E</div>
+            <div class="score">F</div>
         </div>
     </body>
 </html>
