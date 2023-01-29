@@ -2,27 +2,12 @@
 <html>
     <style>
         body{
-            max-width: 1920px;
-            background-color: black;
-            margin: 0px;
+            margin: 0;
         }
-        .container_main{
-            display: flex;
-            width: 1200px;
-            margin-left: 360px;
-            margin-right: 360px;
-            flex-direction: column;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            align-items: stretch;
-            align-content: stretch;
-        }
-        .intro{
-            width: 1200px;
-            height: 619px;
-            left: 360px;
-            background-image: url("titleimg.png");
-            background-size: contain;
+        .container{
+            display: grid;
+            place-items: center;
+            grid-auto-columns: minmax(1200px, auto);
         }
     </style>
     <head>
@@ -32,13 +17,12 @@
         </title>
     </head>
     <body>
-        <div class="container_main">
-            <div class="intro">A</div>
-            <div class="index">B</div>
-            <div class="start">C</div>
-            <div class="subtitle">D</div>
-            <div class="end">E</div>
-            <div class="score">F</div>
+        <div class="container">
+            <div class="item" id="title_img">
+                <img src="titleimg.png">
+            </div>
+            <div class="item">1</div>
+            <div class="item">2</div>
         </div>
     </body>
 </html>
