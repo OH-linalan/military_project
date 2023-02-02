@@ -5,10 +5,26 @@ ver 0.0.1
     pytube
     moviepy
 """
-from pytube import YouTube
-Download_folder = '\\workspace\\mili\Python\\videos'
-yt = YouTube('https://www.youtube.com/watch?v=K4TOrB7at0Y')
+from pytube import *
+def downloading(pl_url, url_lists):
+    p = Playlist(pl_url)
+    for url() in p.video_urls():
+        if url() in url_lists:
+            continue
+        else:
+            Y = YouTube(url())
+            stream = Y.streams.get_highest_resolution()
+            stream.download('\\videos')
+            url_lists.append(url())
+    return url_lists
 
-titles = yt.title
-stream = yt.streams.get_highest_resolution()
-stream.download(Download_folder)
+f = open('url.txt','r')
+url_lists = f.readlines()
+f.close()
+pl_urls = 'https://www.youtube.com/playlist?list=PLY6G8AGWkx5D_NOH2JwwF25jg5-sgP4um'
+f = open('url.txt','a')
+temp() = downloading(pl_urls, url_lists)
+f.truncate(0)
+for elements in temp():
+    f.write(elements)
+f.close()
