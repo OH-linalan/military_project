@@ -5,4 +5,10 @@ ver 0.0.1
     pytube
     moviepy
 """
-aa
+from pytube import YouTube
+Download_folder = '\\workspace\\mili\Python\\videos'
+yt = YouTube('https://www.youtube.com/watch?v=K4TOrB7at0Y')
+
+titles = yt.title
+stream = yt.streams.get_highest_resolution()
+stream.download(Download_folder)
