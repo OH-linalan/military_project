@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>
+</title>
+</head>
+<body>
+    <!-- 30~32.객체 -->
+    <h1>object</h1>
+    <!-- 
+        객체: 순서 없이 정보를 저장할 수 있는 도구
+        이름이 있는 정리정돈 상자
+        배열, 데이터, 함수 등 다양한 것을 한번에 사용 가능
+    -->
+    <h2>create</h2>
+    <script>create</script>
+    <script>
+        var coworkers = {//객체 선언
+            "programmer": "egoing",//키 : 내용
+            "designer":"leezche"
+        };
+        document.write("programmer : "+coworkers.programmer+"<br>");
+        document.write("designer : "+coworkers.designer+"<br>");//객체.이름
+        coworkers.bookkeeper = "duru";//데이터 추가
+        document.write("bookkeeper : "+coworkers.bookkeeper+"<br>");
+        coworkers["data scientist"] = "taeho";
+        document.write("data scientist : "+coworkers["data scientist"]+"<br>");
+    </script>
+    <h2>iterate</h2>
+    <script>
+        for(var key in coworkers){//객체의 key 값을 가져옴
+            document.write(key+" : "+coworkers.key+"<br>");
+        }
+    </script>
+    <h2>property & method</h2>
+    <script>
+        coworkers.shawAll = function(){
+                for(var key in this){
+                document.write(key+" : "+this.key+"<br>");
+            } //this를 사용하면 함수가 속한 객체 이름을 가져온다.
+        }
+        //객체의 함수를 메소드라고 하고 변수를 프로퍼티라고 한다.
+    </script>
+</body>
+</html>

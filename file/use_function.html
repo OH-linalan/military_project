@@ -1,0 +1,70 @@
+<html>
+<head>
+    <!-- 28.함수의 활용 -->
+  <title>WEB1 - Welcome</title>
+  <meta charset="utf-8">
+  <script>
+function day_night_handler(self){     //this를 받아 value를 넣는다. 
+    var target = document.querySelector('body');
+    var alist = document.querySelectorAll('a');
+    var i=0;
+    if(self.value === 'night'){
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        self.value = 'day';
+        while(i<alist.length){
+            alist[i].style.color='powderblue';
+            i++;
+        }
+    } else {
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        self.value = 'night';
+        i=0;
+        while(i<alist.length){
+            alist[i].style.color='blue';
+            i++;
+        }
+    }
+}
+//함수를 이용하여 코드를 바꾸면 함수의 이름을 콩해 이 함수가 어떤 기능을 하는지 알 수 있게 되고
+//함수를 여러번 사용했을 때 이 코드가 기능적으로 같다는 것을 알 수 있게 된다.
+  </script>
+</head>
+<body>
+    <!-- 함수를 이용한 코드 리팩토링 -->
+  <h1><a href="index.html">WEB</a></h1>
+  <input type="button" value="night" onclick="
+  var target = document.querySelector('body');
+  var alist = document.querySelectorAll('a');
+  var i=0;
+  if(this.value === 'night'){//함수에서는 this를 사용하면 안된다.
+    target.style.backgroundColor = 'black';
+    target.style.color = 'white';
+    this.value = 'day';
+    while(i<alist.length){
+        alist[i].style.color='powderblue';
+        i++;
+    }
+  } else {
+    target.style.backgroundColor = 'white';
+    target.style.color = 'black';
+    this.value = 'night';
+    i=0;
+    while(i<alist.length){
+        alist[i].style.color='blue';
+        i++;
+    }
+}
+">
+  <ol>
+    <li><a href="1.html">HTML</a></li>
+    <li><a href="2.html">CSS</a></li>
+    <li><a href="3.html">JavaScript</a></li>
+  </ol>
+  <h2>WEB</h2>
+  <p>The World Wide Web (abbreviated WWW or the Web) is an information space where documents and other web resources are identified by Uniform Resource Locators (URLs), interlinked by hypertext links, and can be accessed via the Internet.[1] English scientist Tim Berners-Lee invented the World Wide Web in 1989. He wrote the first web browser computer program in 1990 while employed at CERN in Switzerland.[2][3] The Web browser was released outside of CERN in 1991, first to other research institutions starting in January 1991 and to the general public on the Internet in August 1991.
+  </p>
+  <input type="button" value="night" onclick="day_night_handler(this);">
+</body>
+</html>

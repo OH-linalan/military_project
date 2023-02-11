@@ -1,0 +1,29 @@
+<h1><a href="index.html">WEB</a></h1>
+  <!-- 조건문 이용 day night 토글 버튼 : 17.조건문의 활용-->
+  <input id="night_day" type="button" value="night" onclick="
+  if(document.querySelector('#night_day').value === 'night'){
+    document.querySelector('body').style.backgroundColor = 'black';
+    document.querySelector('body').style.color = 'white';
+    document.querySelector('#night_day').value = 'day';
+  } else {
+    document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('body').style.color = 'black';
+    document.querySelector('#night_day').value = 'night';
+  }
+">
+  <!-- 
+    botton의 id를 night_day로 한다.
+    ->document.querySelector(#night_day).value를 사용하면 value를 알 수 있다.
+    night_day의 value가 night라면 야간모드 코드 실행됨
+    elde인 경우 주간모드 실행됨
+    주 야간 모드 변경시 value값을 바꿔서 if의 조건을 바꿔줌
+   -->
+  <ol>
+    <li><a href="1.html">HTML</a></li>
+    <li><a href="2.html">CSS</a></li>
+    <li><a href="3.html">JavaScript</a></li>
+  </ol>
+  <h2>JavaScript</h2>
+  <p>
+    JavaScript , often abbreviated as JS, is a high-level, dynamic, weakly typed, prototype-based, multi-paradigm, and interpreted programming language. Alongside HTML and CSS, JavaScript is one of the three core technologies of World Wide Web content production. It is used to make webpages interactive and provide online programs, including video games. The majority of websites employ it, and all modern web browsers support it without the need for plug-ins by means of a built-in JavaScript engine. Each of the many JavaScript engines represent a different implementation of JavaScript, all based on the ECMAScript specification, with some engines not supporting the spec fully, and with many engines supporting additional features beyond ECMA.
+</p>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>
+</title>
+</head>
+<body>
+    <!-- 22.배열과 반복문 -->
+    <h1>loop & array</h1>
+    <h2>co workers</h2>
+    <ul>
+        <li>egoing</li>
+        <li>leezche</li>
+        <li>duru</li>
+        <li>taeho</li>
+    </ul>
+    <!-- 
+        li의 요소가 많고 li 말고 다른 태그도 함께 들어간다면 글 목록을 작성하는 것은 쉽지 않다.
+    -->
+    <h2>co workers with while</h2>
+    <script>
+        var coworkers = ['egoing','leezche','duru','taeho'];
+        var i=0;
+        while(i<4){
+        document.write('<li>'+coworkers[i]+'</li>');
+        i++;
+    }
+    // i가 증가함에 따라 배열의 index가 출력된다.
+    //하지만 배열의 멤버가 증감한다면 매번 while문을 바꾸어 주어야 한다.
+    //data가 바뀌더라도 ligic이 바뀌면 안된다.
+    </script>
+    <h2>co workers with length</h2>
+    <script>
+        var coworkers1 = ['egoing','leezche','duru','taeho'];
+        var i=0;
+        while(i<coworkers1.length){
+        document.write('<li>'+coworkers1[i]+'</li>');
+        i++;
+    }
+    //배열의 길이를 조건으로 넣어줌에 따라 값의 증감이 발생하더라도 logic이 변하지 않게 되므로 코드의 효율성이 증가한다.
+
+    </script>
+</body>
+</html>

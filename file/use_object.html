@@ -1,0 +1,56 @@
+<html>
+<head>
+    <!--  33.객체의 활용 -->
+  <title>WEB1 - Welcome</title>
+  <meta charset="utf-8">
+  <script>
+    var body = {//연관되는 함수를 객체로 묶어 정리정돈 한다.
+        setColor:function(color){
+            document.querySelector('body').style.color = color;
+        },
+        setbackgroundcolor:function(color){
+            document.querySelector('body').style.backgroundColor = color;
+        }
+    }
+    var links = {
+        setcolor:function(color){
+            var alist = document.querySelectorAll('a');
+            while(i<alist.length){
+                alist[i].style.color=color;
+                i++;
+            }
+        }
+    }
+    function day_night_handler(self){ 
+        var target = document.querySelector('body');
+        var i=0;
+        if(self.value === 'night'){
+            body.setbackgroundcolor('black');
+            body.setColor('white');
+            self.value = 'day';
+            links.setcolor('powderblue');
+        } else {
+            body.setbackgroundcolor('white');
+            body.setColor('black')
+            self.value = 'night';
+            i=0;
+            links.setcolor('blue');
+        }
+    }
+    </script>
+</head>
+<body>
+  <h1><a href="index.html">WEB</a></h1>
+  <input type="button" value="night" onclick="day_night_handler(this);">
+  <ol>
+    <li><a href="1.html">HTML</a></li>
+    <li><a href="2.html">CSS</a></li>
+    <li><a href="3.html">JavaScript</a></li>
+  </ol>
+  <h2>WEB</h2>
+  <p>The World Wide Web (abbreviated WWW or the Web) is an information space where documents and other web resources are identified by Uniform Resource Locators (URLs), interlinked by hypertext links, and can be accessed via the Internet.[1] English scientist Tim Berners-Lee invented the World Wide Web in 1989. He wrote the first web browser computer program in 1990 while employed at CERN in Switzerland.[2][3] The Web browser was released outside of CERN in 1991, first to other research institutions starting in January 1991 and to the general public on the Internet in August 1991.
+  </p>
+
+
+</body>
+</html>
