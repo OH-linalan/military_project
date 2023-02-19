@@ -1,3 +1,4 @@
+@military_project
 #C++ Coding Style Guide
 ##Introduction
 ####This document provides guidelines for writing C++ code using the K&R method. The K&R style is a popular coding style for C and C++ that emphasizes readability and simplicity. The style is named after the authors of "The C Programming Language," Brian Kernighan and Dennis Ritchie.
