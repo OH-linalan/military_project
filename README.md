@@ -1,7 +1,7 @@
-@military_project
-#C++ Coding Style Guide
-##Introduction
-####This document provides guidelines for writing C++ code using the K&R method. The K&R style is a popular coding style for C and C++ that emphasizes readability and simplicity. The style is named after the authors of "The C Programming Language," Brian Kernighan and Dennis Ritchie.
+
+# C++ Coding Style Guide
+## Introduction
+#### This document provides guidelines for writing C++ code using the K&R method. The K&R style is a popular coding style for C and C++ that emphasizes readability and simplicity. The style is named after the authors of "The C Programming Language," Brian Kernighan and Dennis Ritchie.
 
 Naming Conventions
 Use descriptive names for variables, functions, and classes. Avoid single-letter variable names.
@@ -18,7 +18,7 @@ const int MAX_SCORE = 100;
 private:
   int _grade;
 ```
-##Indentation
+## Indentation
 Use 4 spaces for indentation.
 Use spaces instead of tabs.
 ```
@@ -29,7 +29,7 @@ if (condition) {
     // do something else
 }
 ```
-##Braces
+## Braces
 Place opening braces on the same line as the statement or declaration.
 Place closing braces on a new line.
 ```
@@ -40,7 +40,7 @@ if (condition) {
     // do something else
 }
 ```
-##Line Length
+## Line Length
 Limit lines to 80 characters.
 Break long lines at logical points, such as after a comma.
 ```
@@ -56,7 +56,7 @@ void displayStudentRecord(const StudentRecord& record, bool showDetails) {
     cout << endl;
 }
 ```
-##Comments
+## Comments
 Use comments to explain the purpose and behavior of code.
 Place comments on a separate line above the code they describe.
 Use a blank line before and after a block of comments.
